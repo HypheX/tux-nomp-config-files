@@ -1,0 +1,64 @@
+{
+    "enabled": true,
+    "coin": "tuxcoin.json",
+
+    "address": "your_coinbase_address",
+
+    "rewardRecipients": {
+        "your_fee_address": 0.5
+    },
+
+    "paymentProcessing": {
+        "enabled": true,
+        "paymentInterval": 7200,
+        "minimumPayment": 0.001,
+        "daemon": {
+            "host": "127.0.0.1",
+            "port": 42072,
+            "user": "your_user",
+            "password": "your_password"
+        }
+    },
+
+    "ports": {
+        "3433": {
+            "diff": 0.5,
+            "varDiff": {
+                "minDiff": 0.5,
+                "maxDiff": 1024,
+                "targetTime": 15,
+                "retargetTime": 90,
+                "variancePercent": 30
+            }
+        }
+    },
+    
+    "ports2": {
+        "3334": {
+            "diff": 8,
+            "varDiff": {
+                "minDiff": 8,
+                "maxDiff": 512,
+                "targetTime": 15,
+                "retargetTime": 90,
+                "variancePercent": 30
+            }
+        }
+    },
+     
+    "p2p": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 42069,
+        "disableTransactions": true
+    },
+
+    "daemons": [
+        {
+            "host": "127.0.0.1",
+            "port": 42072,
+            "user": "your_user",
+            "password": "your_password"
+        }
+    ]
+}
